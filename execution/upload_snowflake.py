@@ -9,6 +9,7 @@ from execution.logger import logger_setup
 dotenv.load_dotenv()
 logger = logger_setup()
 
+
 def upload_to_snowflake(): 
 
     snowflake_user = os.getenv("snowflake_user")
@@ -36,8 +37,8 @@ def upload_to_snowflake():
     
     # add a timestamp column to the dataframe
     df['inserted_at'] = datetime.datetime.now().isoformat()
-
-    # snowflake connection
+    
+# snowflake connection
     conn = snowflake.connector.connect(
         user=snowflake_user,
         password=snowflake_password,

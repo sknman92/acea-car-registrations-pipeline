@@ -6,16 +6,8 @@ Parse data from PDFs saved in a user-specified directory into intermediate csvs.
 
 ## Process
 
-0. **Web scrape (download PDFs from source)**
-   - Use `execution/webscrape.py` — calls `web_scrape_acea()` with a date range and saves PDFs to `PDFs/ACEA`
-   - Ask the user for the date range (`YYYY-MM-DD` start and end) before running
-   - Default method is `"auto"` (requests first, playwright fallback); switch to `"playwright_manual"` if downloads fail due to bot protection
-   - If `playwright_manual` still results in 0 downloads, stop and notify the user — do not proceed to PDF scrape. Ask the user to manually download the PDFs and place them in `PDFs/ACEA` before continuing
-   - After the run, report how many files were downloaded and flag any failures
-   - Skip this step if the user confirms the PDFs are already in place
-
 1. **Fetch all PDFs in directory**
-   - There is no execution .py file for this. Come up with the best way to grab data from the PDF and store the script in `execution` fo1lder.
+   - There is no execution .py file for this. Come up with the best way to grab data from the PDF and store the script in `execution` folder.
    - Folder schema provided in `schema` folder for each directory. For example,
      if you are pulling data from PDFs listed under the `PDFs/ACEA` folder, then use `schema/ACEA.csv`
    - Make sure you are grabbing the region description correctly
@@ -44,7 +36,7 @@ Parse data from PDFs saved in a user-specified directory into intermediate csvs.
    - Export models in `marts/` to Tableau using `execution/publish_tableau_datasource.py`
 
 6. **Data triage**
-   - Use Tableau MCP Vizql Data Service (VDS) tool to triage published Tableau data sources
+   - Use Tableau MCP Vizql Data Service (VDS) tool to triage published Tableau data sources and answer all query about data
    - **6a. Query + export dataset**
      - Run Tableau MCP query (`mcp_tableau_query-datasource`) for the user’s triage question
      - Export and save the returned rows as csv in the run folder
