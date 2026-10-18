@@ -16,3 +16,12 @@ tableau-mcp/
 PDFs/
 package-lock.json
 package.json
+
+# logs
+*.log
+dbt/logs/
+
+# machine-specific config (see *.example.json)
+.mcp.json
+.vscode/mcp.json
+.vscode/launch.json

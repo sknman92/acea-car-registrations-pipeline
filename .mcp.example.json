@@ -11,11 +11,11 @@
       ]
     },
     "dbt": {
-      "command": "C:/Users/CharlesYi/Documents/GitHub/Agentic Workflow Project_7.2.26/.venv/Scripts/uvx.exe",
+      "command": "<PATH_TO_REPO>/.venv/Scripts/uvx.exe",
       "args": ["dbt-mcp"],
       "env": {
-        "DBT_PROJECT_DIR": "C:/Users/CharlesYi/Documents/GitHub/Agentic Workflow Project_7.2.26/dbt",
-        "DBT_PATH": "C:\\Users\\CharlesYi\\Documents\\GitHub\\Agentic Workflow Project_7.2.26\\.venv\\Scripts\\dbt.exe",
+        "DBT_PROJECT_DIR": "<PATH_TO_REPO>/dbt",
+        "DBT_PATH": "<PATH_TO_REPO>/.venv/Scripts/dbt.exe",
         "DISABLE_DBT_CODEGEN": "false"
       }
     }
